@@ -1,0 +1,30 @@
+{% extends 'ensinosuperior/layout.html' %}
+
+{% block content %}
+    <ul>
+
+    <h1>{{curso.nome}}</h1>
+
+    <h3>Apresentação</h3>
+    <p>{{curso.apresentacao}}</p>
+
+    <h3>Objetivos</h3>
+    <p>{{curso.objetivos}}</p>
+
+    <h3>Competencias</h3>
+    <p>{{curso.competencias}}</p>
+
+    <h3>Horas de Contacto</h3>
+    <p>{{curso.horas_contacto_total}}</p>
+
+    <h3>ECTS</h3>
+    <p>{{curso.ects}}</p>
+
+    <h2>Disciplinas</h2>
+    {% for disciplina in curso.disciplinas.all %}
+        <li>
+            <a href="{% url 'ensinosuperior:disciplina' disciplina.id %}">{{ disciplina }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

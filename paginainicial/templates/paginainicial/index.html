@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Inicio</title>
+        <style>
+            body {
+                background: White;
+            }
+            .errorlist {
+                        display:none;
+                        }
+        </style>
+
+    </head>
+    <body>
+        <header>
+        <a href="{% url 'bandas:bandas_index' %}"><button>Bandas</button></a>
+        <a href="{% url 'ensinosuperior:ensinosuperior_index' %}"><button>Curso</button></a>
+                {% if request.user.is_authenticated %}
+                    Username:{{request.user.username}}
+                    <a href="{% url 'autenticacao:logout' %}"><button>Logout</button></a>
+                {% else %}
+                    <a href="{% url 'autenticacao:login' %}"><button>Login</button></a>
+                {% endif %}
+        </header>
+
+
+
+        <footer>
+            <p>Website by Miguel</p>
+        </footer>
+    </body>
+</html>

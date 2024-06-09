@@ -1,0 +1,22 @@
+{% extends 'ensinosuperior/layout.html' %}
+
+{% block content %}
+    <nav>
+        <a href="{% url 'ensinosuperior:disciplina' projeto.disciplina.id %}"><Button>{{ projeto.disciplina }}</Button></a>
+    </nav>
+    <h2>{{projeto.disciplina}}</h2>
+    <h3>{{ projeto }}</h3>
+
+    <p>{{projeto.descricao}}</p>
+    <h5>Conceitos aplicados</h5>
+    <p>{{projeto.conceitos_aplicados}}</p>
+
+
+
+    <a href="{{projeto.link_video}}">Video no youtube</a>
+    <p></p>
+    <a href="{{projeto.link_github}}">Github</a>
+
+
+
+{% endblock %}

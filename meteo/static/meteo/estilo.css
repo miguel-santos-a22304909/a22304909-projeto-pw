@@ -1,0 +1,57 @@
+/* Corpo */
+body {
+    background-color: #ffffff; /* Branco */
+    color: #000000; /* Preto */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #e6e6fa; /* Roxo claro */
+    color: #000000; /* Preto */
+    padding: 1em;
+    margin: 0 0 5px 0; /* Margem de 5px abaixo do header */
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button{
+    background-color: #993399;
+    color: #ffffff;
+    border: 1px solid #000000;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 60px;
+    height: 40px;
+    border-radius: 5px; /* Bordas redondas */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 5px; /* Espaço a volta do botao */
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Cabeçalhos */
+h1, h2, h3, h4, h5, h6 {
+    color: #000000; /* Preto */
+    margin: 0.5em 0;
+}
+
+img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+
+

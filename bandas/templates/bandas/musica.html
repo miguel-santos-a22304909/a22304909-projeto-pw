@@ -1,0 +1,15 @@
+{% extends 'bandas/layout.html' %}
+
+
+
+{% block content %}
+    <nav>
+        <a href="{% url 'bandas:album' musica.album.id %}"><Button>{{ musica.album.titulo }}</Button></a>
+    </nav>
+    <h3>{{ musica }}</h3>
+
+    <p> Duração: {{ musica.duracao }}</p>
+
+
+
+{% endblock %}

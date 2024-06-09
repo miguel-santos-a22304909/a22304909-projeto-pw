@@ -1,0 +1,46 @@
+.home > * {
+    background-color: dodgerblue;
+    border: 1px solid black;
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+header{
+    grid-area: header;
+}
+nav{
+    grid-area: menu;
+}
+main{
+    grid-area: main;
+}
+footer{
+    grid-area: footer;
+}
+
+div.home{
+    margin: 20px;
+    height: 500px;
+    background-color: purple;
+    display: grid;
+
+    grid-template-areas:
+    'header header header'
+    'menu main main'
+    'menu footer footer';
+    gap: 10px;
+    padding: 10px;
+
+    grid-template-columns: 20vw 3fr 2fr;
+    grid-template-rows: 15vh 15fr 1fr;
+}
+
+@media (max-width: 600px){
+    grid-template-areas:
+        'header'
+        'menu'
+        'main'
+        'footer';
+    grid-template-columns: auto;
+    grid-template-rows: 15vh 10vh 3fr 1fr;
+}

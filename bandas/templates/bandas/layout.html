@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bandas</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bandas/estilos.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/feef2720be.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="grid">
+        <header>
+            <h1>Bandas <i class="fa-solid fa-music"></i></h1>
+        </header>
+
+        <nav>
+            <a href="{% url 'portfolio:index' %}"><button class="importante">Inicio</button></a>
+            <a href="{% url 'bandas:bandas_index' %}"><button class="importante">Bandas</button></a>
+            {% if request.user.is_authenticated %}
+                Username: {{ request.user.username }}
+                <a href="{% url 'autenticacao:logout' %}"><button class="importante">Logout</button></a>
+            {% else %}
+                <a href="{% url 'autenticacao:login' %}"><button class="importante">Login</button></a>
+            {% endif %}
+        </nav>
+
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+
+        <footer>
+            <p>Website by Miguel</p>
+        </footer>
+    </div>
+</body>
+</html>

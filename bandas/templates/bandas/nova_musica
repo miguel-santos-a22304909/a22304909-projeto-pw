@@ -1,0 +1,17 @@
+{% extends 'bandas/layout.html' %}
+
+{% block content %}
+    <h3>Nova Música</h3>
+
+    <form action="" method="post">
+    <!-- enctype deve ser definido se houver submissão de ficheiros ou imagens -->
+
+      {% csrf_token %}   <!-- obrigatório nos forms Django -->
+      <table>
+          {{ form }}   <!-- insere input para cada atributo da classe Musica, numa tabela -->
+      </table>
+      <input type="submit" value="Criar música">
+
+    </form>
+
+{% endblock %}

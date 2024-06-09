@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Web</title>
+    <style>
+        body {
+            background: orange;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Programação Web</h1>
+        <nav>
+            <a href="{% url 'pwsite:index' %}">Introducao</a>
+            <a href="{% url 'pwsite:sobre' %}">Sobre</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Interesses</h2>
+        <p>
+        Até agora tenho gostado de aprender como funciona o back-end de um website, como é que um website realmente é feito mas também
+        tenho interesse em saber como funcionam páginas web não estaticas:
+        </p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Programação Web, Universidade Lusófona - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Curso</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'ensinosuperior/estilos.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/feef2720be.js" crossorigin="anonymous"></script>
+</head>
+    <body>
+        <header>
+            <h1>Curso</h1>
+            <a href="{% url 'portfolio:index' %}"><button class="importante">Inicio</button></a>
+            <a href="{% url 'ensinosuperior:ensinosuperior_index' %}"><button class="importante">Curso</button></a>
+        </header>
+
+        <main>
+
+            {% block content %}
+            {% endblock %}
+
+        </main>
+
+        <footer>
+            <p>Website by Miguel</p>
+        </footer>
+    </body>
+</html>

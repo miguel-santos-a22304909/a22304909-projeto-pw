@@ -1,0 +1,27 @@
+{% extends 'meteo/layout.html' %}
+
+{% block content %}
+    <h2>Previsão do Tempo em Lisboa</h2>
+
+    {% if dados_proximos_dias %}
+        <div>
+            <h3>Próximos 5 dias:</h3>
+            <ul>
+                {% for dado in dados_proximos_dias %}
+                    <li>
+                        <p>Data: {{ dado.data }}</p>
+                        <p>Temperatura Mínima: {{ dado.temperatura_minima }}°C</p>
+                        <p>Temperatura Máxima: {{ dado.temperatura_maxima }}°C</p>
+                        <p>Descrição do Tempo: {{ dado.descricao_tempo }}</p>
+                        {% if dado.icone_tempo %}
+                            {% load static %}
+                            <img src="{% static dado.icone_tempo %}" alt="Ícone do Tempo">
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% else %}
+        <p>Não há dados disponíveis para exibir.</p>
+    {% endif %}
+{% endblock %}

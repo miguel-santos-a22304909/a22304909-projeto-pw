@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latin Text</title>
+    <style>
+        body {
+            background: orange;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bem vindo ao repositório de textos em Latim!</h1>
+        <nav>
+            <a href="{% url 'latintext:loremipsum' %}">The standard Lorem Ipsum passage</a>
+            <a href="{% url 'latintext:finibus' %}">de Finibus Bonorum et Malorum</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <p>Neste site, encontram-se textos em latim</p>
+    </main>
+
+    <footer>
+        <p>Website by Miguel</p>
+    </footer>
+
+</body>
+</html>

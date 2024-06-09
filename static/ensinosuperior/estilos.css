@@ -1,0 +1,104 @@
+/* Estilos básicos para o corpo da página */
+body {
+    background-color: #ffffff; /* Branco */
+    color: #000000; /* Preto */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para o cabeçalho */
+header {
+    background-color: #87CEFA; /* Azul claro*/
+    color: #000000; /* Preto */
+    padding: 1em;
+    margin: 0 0 5px 0; /* Margem de 5px abaixo do header */
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Estilo para os cabeçalhos */
+h1, h2, h3, h4, h5, h6 {
+    color: #000000; /* Preto */
+    margin: 0.5em 0;
+}
+
+/* Estilo para parágrafos */
+p {
+    color: #000000; /* Preto */
+    margin: 1em 0;
+}
+
+/* Estilo para links */
+a {
+    color: #00A8FF; /* Azul u escuro */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para botões */
+button {
+    background-color: #87CEFA;
+    color: #000000; /* Preto */
+    border: 1px solid #000000; /* Preto */
+    padding: 0.5em 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 150px; /* Largura fixa */
+    height: 50px; /* Altura fixa */
+    border-radius: 5px; /* Bordas arredondadas */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 5px; /* Espaço ao redor do botão */
+    font-size: 14px;
+}
+
+
+button:hover {
+    background-color: #000000; /* Preto */
+    color: #ffffff; /* Branco */
+}
+
+/* Estilo para botões importantes */
+button.importante {
+    background-color: #00A8FF; /* Azul escuro */
+    color: #ffffff; /* Branco */
+}
+
+button.importante:hover {
+    background-color: #000000; /* Preto */
+    color: #ffffff; /* Branco */
+}
+
+/* Estilo para inputs */
+input, textarea {
+    border: 1px solid #000000; /* Preto */
+    padding: 0.5em;
+    margin: 0.5em 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Estilo para formulários */
+form {
+    max-width: 600px;
+    margin: 2em auto;
+    padding: 1em;
+    background-color: #ffffff; /* Branco */
+    border: 1px solid #000000; /* Preto */
+}
+
+/* Estilo para containers */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1em;
+    background-color: #ffffff; /* Branco */
+    border: 1px solid #000000; /* Preto */
+}

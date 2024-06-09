@@ -1,0 +1,120 @@
+
+        .home > * {
+            background-color: SkyBlue;
+            border: 1px solid black;
+            padding: 1rem;
+            font-size: 2rem;
+        }
+
+        header {
+            grid-area: header;
+            position: sticky;
+        }
+
+        nav {
+            grid-area: menu;
+            position: sticky;
+        }
+
+        main {
+            background-image:url("https://img.iol.pt/image/id/63f8b76d0cf2665294d723ac/1024.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            background-color: black;
+            color: white;
+            grid-area: main;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+        div.home {
+            margin: 20px;
+            height: 500px;
+            background-color: black;
+            display: grid;
+
+            grid-template-areas:
+                'header menu menu'
+                'main main main'
+                'footer footer footer';
+            gap: 10px;
+            padding: 10px;
+
+            grid-template-columns: 20vw 3fr 2fr;
+            grid-template-rows: 4fr 14fr 2fr;
+        }
+
+        @media (max-width: 600px) {
+            div.home {
+                grid-template-areas:
+                    'header'
+                    'menu'
+                    'main'
+                    'footer';
+                grid-template-columns: auto;
+                grid-template-rows: 15vh 10vh 3fr 1fr;
+            }
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header, nav, main, footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header, footer {
+            background-color: SkyBlue;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        nav {
+            background-color: LightSkyBlue;
+            text-align: left;
+        }
+
+        main {
+            background-color: white;
+            color: black;
+        }
+
+        footer {
+            background-color: SkyBlue;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+        }
+
+button {
+    background-color: SteelBlue;
+    color: #ffffff;
+    border: 1px solid #000000;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 75px;
+    height: 40px;
+    border-radius: 5px; /* Bordas redondas */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 5px; /* Espaço a volta do botao */
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}

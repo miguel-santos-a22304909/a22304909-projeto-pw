@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio/landingpage.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+<div class = 'home'>
+    <header>
+        Portfolio
+    </header>
+
+    <nav>
+        {% if request.user.is_authenticated %}
+            User: {{request.user.username}}
+            <a href="{% url 'autenticacao:logout' %}"><button>Logout</button></a>
+        {% else %}
+            <a href="{% url 'autenticacao:login' %}"><button>Login</button></a>
+        {% endif %}
+
+        <a href="{% url 'bandas:bandas_index' %}"><button>Bandas</button></a>
+        <a href="{% url 'ensinosuperior:ensinosuperior_index' %}"><button>Curso</button></a>
+        <a href="{% url 'meteo:tempo_lisboa' %}"><button>Meteo</button></a>
+
+    </nav>
+
+    <main>Bem vindo ao meu website!</main>
+    <footer>Website by Miguel</footer>
+</div>
+
+</body>

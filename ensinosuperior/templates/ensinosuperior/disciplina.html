@@ -1,0 +1,36 @@
+{% extends 'ensinosuperior/layout.html' %}
+
+{% block content %}
+
+    <h3>{{ disciplina }}</h3>
+    <h4>Ramo</h4>
+    <p>{{disciplina.ramo}}</p>
+    <h4>Ano</h4>
+    <p>{{disciplina.ano}}</p>
+    <h4>Semestre</h4>
+    <p>{{disciplina.semestre}}</p>
+    <h4>ECTS</h4>
+    <p>{{disciplina.ects}}</p>
+    <h4>Horas de Contacto</h4>
+    <p>{{disciplina.horas_contacto}}</p>
+    <h4>Curricular Unit Readable Code</h4>
+    <p>{{disciplina.curricularIUnitReadableCode}}</p>
+    <h4>Area Cientifica</h4>
+    <p>{{disciplina.area_cientifica}}</p>
+
+
+    <h4>Projeto</h4>
+    <ul>
+    {% if disciplina.projeto %}
+        <ul>
+            <li>
+                <a href="{% url 'ensinosuperior:projeto' disciplina.projeto.id %}">{{ disciplina.projeto }}</a>
+            </li>
+        </ul>
+    {% else %}
+        <p>Nenhum projeto associado a esta disciplina.</p>
+    {% endif %}
+    </ul>
+
+
+{% endblock %}

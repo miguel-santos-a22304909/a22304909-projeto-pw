@@ -1,0 +1,28 @@
+main {
+    background-image:url("https://img.iol.pt/image/id/63f8b76d0cf2665294d723ac/1024.jpg");
+}
+
+
+
+button {
+    background-color: SteelBlue;
+    color: #ffffff;
+    border: 1px solid #000000;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 75px;
+    height: 40px;
+    border-radius: 5px; /* Bordas redondas */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 5px; /* Espaço a volta do botao */
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
